@@ -1,4 +1,4 @@
-import App from './App.tsx';
+import App from './components/App/App';
 import ReactDOM from 'react-dom/client';
 
 ReactDOM
