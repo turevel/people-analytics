@@ -15,4 +15,11 @@
     min-width: 320px;
     height: max(600px, 100vh);
   }
+
+  .loginTemplate {
+    background-image: url('../assets/images/interface.png');
+    background-position: 0 calc(100% + 30px);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
