@@ -1,5 +1,5 @@
 import Analytics from './Analytics/Analytics';
-import Login from './Login/Login';
+import Login from './Login';
 import NotFound from './NotFound/NotFound';
 import { createBrowserRouter , Navigate } from 'react-router-dom';
 
