@@ -9,3 +9,10 @@
     font-family: 'Inter', sans-serif;
   }
 }
+
+@layer components {
+  .page {
+    min-width: 320px;
+    height: max(600px, 100vh);
+  }
+}
