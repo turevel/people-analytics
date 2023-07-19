@@ -1,15 +1,14 @@
-import LoginTemplateLogo from './LoginTemplateLogo';
-
 function LoginTemplate() {
 	return (
 		<div className="bg-indigo-500 w-full h-full text-zinc-50 loginTemplate">
 			<div className="bg-indigo-500 p-9">
-				<LoginTemplateLogo />
+				<h2 className="text-lg font-bold mb-4">
+					Desvendando os números por trás do seu time!
+				</h2>
 
 				<div className="text-sm space-y-2 bg-indigo-500 ">
 					<p>
-						<strong>Desvendando os números por trás do seu time.</strong>
-          &nbsp;Com gráficos claros e intuitivos, nossa aplicação simplifica
+          Com gráficos claros e intuitivos, nossa aplicação simplifica
           a contagem de headcount e turnover, fornecendo informações valiosas
           para líderes compreenderem o panorama de suas equipes.
 					</p>
