@@ -21,10 +21,10 @@
     height: max(600px, 100vh);
   }
 
-  .loginTemplate {
+  .loginInterfaceSection {
     background-image: url('../assets/images/interface.png');
-    background-position: 0 calc(100% + 30px);
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
 }

@@ -1,12 +1,12 @@
-function LoginTemplate() {
+function LoginInterfaceSection() {
 	return (
-		<div className="bg-indigo-500 w-full h-full text-zinc-50 loginTemplate">
+		<div className="bg-indigo-200 text-zinc-50 flex flex-col-reverse sm:flex-col min-h-screen">
 			<div className="bg-indigo-500 p-9">
 				<h2 className="text-lg font-bold mb-4">
 					Desvendando os números por trás do seu time!
 				</h2>
 
-				<div className="text-sm space-y-2 bg-indigo-500 ">
+				<div className="text-sm space-y-2 bg-indigo-500">
 					<p>
           Com gráficos claros e intuitivos, nossa aplicação simplifica
           a contagem de headcount e turnover, fornecendo informações valiosas
@@ -21,8 +21,10 @@ function LoginTemplate() {
 					</p>
 				</div>
 			</div>
+
+			<div className="loginInterfaceSection grow w-full" />
 		</div>
 	);
 }
 
-export default LoginTemplate;
+export default LoginInterfaceSection;
