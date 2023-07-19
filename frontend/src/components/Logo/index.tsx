@@ -1,11 +1,15 @@
+import { Link } from 'react-router-dom';
 import { IonMdAnalytics } from '@/components/_icons/IonMdAnalytics';
 
 function Logo() {
 	return (
-		<h1 className="absolute top-4 left-5 font-bold text-xl flex items-center">
-			<IonMdAnalytics className="text-4xl text-indigo-500 mr-2"/>
+		<Link
+			to="/login"
+			className="absolute left-5 top-4 flex items-center text-xl font-bold"
+		>
+			<IonMdAnalytics className="mr-2 text-4xl text-indigo-500" />
 			<span className="text-indigo-500">People</span>Analytics
-		</h1>
+		</Link>
 	);
 }
 
