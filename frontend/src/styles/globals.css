@@ -17,11 +17,11 @@
 
 @layer components {
   .page {
+    min-height: max(600px, 100vh);
     min-width: 320px;
-    height: max(600px, 100vh);
   }
 
-  .loginInterfaceSection {
+  .loginInterfaceBackgroundImage {
     background-image: url('../assets/images/interface.png');
     background-position: center;
     background-repeat: no-repeat;

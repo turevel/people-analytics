@@ -1,6 +1,6 @@
 function LoginInterfaceSection() {
 	return (
-		<div className="bg-indigo-200 text-zinc-50 flex flex-col-reverse sm:flex-col min-h-screen h-full">
+		<div className="bg-indigo-200 text-zinc-50 flex flex-col-reverse lg:flex-col min-h-screen h-full">
 			<div className="bg-indigo-500 p-9">
 				<h2 className="text-lg font-bold mb-4">
 					Desvendando os números por trás do seu time!
@@ -22,7 +22,7 @@ function LoginInterfaceSection() {
 				</div>
 			</div>
 
-			<div className="loginInterfaceSection grow w-full" />
+			<div className="loginInterfaceBackgroundImage grow w-full min-h-[260px] opacity-80" />
 		</div>
 	);
 }
