@@ -1,7 +1,9 @@
+import AnalyticsStats from '@/components/AnalyticsStats/AnalyticsStats';
+
 function Analytics() {
 	return (
 		<main>
-      Analytics Page
+			<AnalyticsStats />
 		</main>
 	);
 }
