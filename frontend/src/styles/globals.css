@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply transition-colors;
+  }
+
   :root {
     font-family: 'Inter', sans-serif;
     @apply antialiased;
