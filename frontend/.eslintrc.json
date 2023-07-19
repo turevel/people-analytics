@@ -20,6 +20,7 @@
       { "allowConstantExport": true }
     ],
     "@typescript-eslint/no-non-null-assertion": "off",
+		"import/no-unresolved": "off",
     "import/order": [
 			"error",
 			{
