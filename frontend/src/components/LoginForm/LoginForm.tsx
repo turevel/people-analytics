@@ -13,7 +13,7 @@ function LoginForm() {
 
 	return (
 		<div className="grid place-items-center pt-24 pb-16">
-			<div className="flex flex-col gap-2 max-w-sm px-5 py-7 bg-white rounded-xl sm:shadow">
+			<div className="flex flex-col gap-2 max-w-sm px-6 py-7 bg-white rounded-xl sm:shadow">
 				<h2 className="text-indigo-500 font-bold text-xl">
 				Entrar
 				</h2>
@@ -37,7 +37,7 @@ function LoginForm() {
 						className="p-2.5 bg-indigo-500 text-zinc-50 rounded-3xl hover:bg-indigo-400 text-sm font-medium cursor-pointer flex gap-1 items-center justify-center"
 						type="submit"
 					>
-					Acessar
+						Acessar
 						<IcRoundArrowForward className="text-lg"/>
 					</button>
 				</form>
