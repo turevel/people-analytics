@@ -1,5 +1,5 @@
+import About from '@/components/About';
 import LoginForm from '@/components/LoginForm';
-import LoginInterfaceSection from '@/components/LoginInterfaceSection/LoginInterfaceSection';
 import LoginLogo from '@/components/Logo';
 
 function Login() {
@@ -7,7 +7,7 @@ function Login() {
 		<main className="page relative grid place-items-center bg-white lg:grid-cols-2 lg:bg-zinc-50">
 			<LoginLogo />
 			<LoginForm />
-			<LoginInterfaceSection />
+			<About />
 		</main>
 	);
 }
