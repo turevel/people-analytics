@@ -1,6 +1,6 @@
 import { IonMdAnalytics } from '@/components/_icons/IonMdAnalytics';
 
-function LoginLogo() {
+function Logo() {
 	return (
 		<h1 className="absolute top-4 left-5 font-bold text-xl flex items-center">
 			<IonMdAnalytics className="text-4xl text-indigo-500 mr-2"/>
@@ -9,4 +9,4 @@ function LoginLogo() {
 	);
 }
 
-export default LoginLogo;
+export default Logo;
