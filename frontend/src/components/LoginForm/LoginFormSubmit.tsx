@@ -7,7 +7,7 @@ interface Props {
 function LoginFormSubmit({ disabled }: Props) {
 	return (
 		<button
-			className="flex cursor-pointer items-center justify-center gap-1 rounded-3xl bg-indigo-500 p-3 text-sm font-medium text-zinc-50 hover:bg-indigo-400 disabled:cursor-not-allowed disabled:bg-zinc-300"
+			className="flex cursor-pointer items-center justify-center gap-1 rounded-3xl bg-indigo-500 p-3 text-sm font-medium text-zinc-50 hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-30"
 			disabled={disabled}
 			type="submit"
 		>
