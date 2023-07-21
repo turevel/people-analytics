@@ -6,7 +6,9 @@ import useMetricsContext from '@/hooks/useMetricsContext';
 function Analytics() {
 	const { headcount, turnover } = useMetricsContext();
 
-	if (!headcount && !turnover) return <Navigate to="/login" />;
+	if (headcount.length === 0 || turnover.length === 0) {
+		return <Navigate to="/login" />;
+	}
 
 	return (
 		<main className="page bg-zinc-50">
