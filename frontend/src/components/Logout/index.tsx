@@ -5,7 +5,11 @@ function Logout() {
 	const { logout } = useMetricsContext();
 
 	return (
-		<button className="text-sm font-medium flex items-center gap-2 bg-indigo-500 text-zinc-50 px-3 py-2 rounded hover:bg-indigo-400" onClick={logout} type="button">
+		<button
+			className="flex items-center gap-2 rounded bg-indigo-500 px-3 py-2 text-sm font-medium text-zinc-50 hover:bg-indigo-400"
+			onClick={logout}
+			type="button"
+		>
 			<LogoutCircleArrow className="text-base" />
       Sair
 		</button>
