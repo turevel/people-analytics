@@ -3,9 +3,6 @@ import LineChart from './LineChart';
 const data = [
 	{
 		id: 1,
-		label: 'Lucas',
-		color: '#1e90ff',
-		hidden: false,
 		data: [
 			{ x: '01-2021', y: 5 },
 			{ x: '02-2021', y: 7 },
@@ -25,15 +22,15 @@ const data = [
 
 function Headcount() {
 	return (
-		<div className="w-full max-w-xl rounded-lg bg-white p-7 md:shadow">
+		<div className="w-full max-w-xl bg-white px-[22px] sm:p-7 md:rounded-lg md:shadow">
 			<header className="mb-5 space-y-1 text-sm">
 				<h2 className="mb-2 text-xl font-bold text-indigo-500">
           Evolução de Headcount
 				</h2>
 				<h4 className="font-semibold">O que é headcount?</h4>
 				<p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ex
-          labore a iure natus quis quasi quas minima nostrum totam!
+          O headcount é o número de funcionários ativos em uma empresa em um
+          período de tempo.
 				</p>
 			</header>
 
