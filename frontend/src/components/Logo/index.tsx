@@ -5,7 +5,7 @@ function Logo() {
 	return (
 		<Link
 			to="/login"
-			className="absolute left-5 top-4 flex items-center text-xl font-bold"
+			className="flex items-center text-xl font-bold"
 		>
 			<IonMdAnalytics className="mr-2 text-4xl text-indigo-500" />
 			<span className="text-indigo-500">People</span>Analytics
