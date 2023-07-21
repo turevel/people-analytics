@@ -18,7 +18,7 @@ function LoginFormSubmit({ disabled }: Props) {
 			{loading ? (
 				<>
 					<LineMdLoadingTwotoneLoop className="text-xl" />
-          Aguarde enquanto processamos...
+          Aguarde...
 				</>
 			) : (
 				<>

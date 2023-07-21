@@ -6,7 +6,7 @@ import emailValidator from '@/helpers/emailValidator';
 import useMetricsContext from '@/hooks/useMetricsContext';
 
 function LoginFormFields() {
-	const { headcount, getMetrics, turnover } = useMetricsContext();
+	const { headcount, turnover, getMetrics } = useMetricsContext();
 	const [email, setEmail] = useState('');
 	const navigate = useNavigate();
 
