@@ -23,7 +23,7 @@ function About() {
 				</div>
 			</div>
 
-			<div className="loginInterfaceBackgroundImage min-h-[260px] w-full grow opacity-80" />
+			<div className="loginInterfaceBackgroundImage min-h-[260px] w-full grow opacity-80" style={{ backgroundColor: '#b4c6f0' }} />
 		</div>
 	);
 }

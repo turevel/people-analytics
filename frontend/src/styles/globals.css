@@ -25,6 +25,6 @@
     background-image: url('../assets/images/interface.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 }
