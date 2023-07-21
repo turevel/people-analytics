@@ -1,4 +1,4 @@
-import { LogoutCircleArrow } from '../_icons/i';
+import { LogoutCircleArrow } from '../_icons/LogoutCircleArrow';
 import useMetricsContext from '@/hooks/useMetricsContext';
 
 function Logout() {

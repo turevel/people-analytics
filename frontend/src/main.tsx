@@ -1,5 +1,5 @@
 import './styles/globals.css';
-import App from './components/App/App';
+import App from './components/App';
 import ReactDOM from 'react-dom/client';
 
 ReactDOM

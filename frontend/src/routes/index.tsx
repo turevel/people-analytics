@@ -1,6 +1,6 @@
-import Analytics from './Analytics/Analytics';
+import Analytics from './Analytics';
 import Login from './Login';
-import NotFound from './NotFound/NotFound';
+import NotFound from './NotFound';
 import { createBrowserRouter , Navigate } from 'react-router-dom';
 
 const router = createBrowserRouter([
