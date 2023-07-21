@@ -1,17 +1,23 @@
 import LoginFormInput from './LoginFormInput';
 import LoginFormSubmit from './LoginFormSubmit';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailValidator from '@/helpers/emailValidator';
+import useMetricsContext from '@/hooks/useMetricsContext';
 
 function LoginFormFields() {
+	const { headcount, getMetrics, turnover } = useMetricsContext();
 	const [email, setEmail] = useState('');
 	const navigate = useNavigate();
 
-	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		navigate('/analytics');
+		await getMetrics(email);
 	};
+
+	useEffect(() => {
+		if (headcount && turnover) navigate('/analytics');
+	}, [headcount, turnover]);
 
 	return (
 		<form
