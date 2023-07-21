@@ -9,7 +9,7 @@ function useRequest() {
 		}
 	};
 
-	return { request };
+	return request;
 }
 
 export default useRequest;
