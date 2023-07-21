@@ -1,13 +1,13 @@
+import { Serie } from '@nivo/line';
 import { ReactNode, useMemo, useState } from 'react';
 import MetricsContext from '@/context/MetricsContext';
 import useRequest from '@/hooks/useRequest';
-import Metrics from '@/interfaces/IMetrics';
 import { getHeadcount, getTurnover } from '@/services/metricsRequests';
 
 function MetricsProvider({ children }: { children: ReactNode }) {
 	const [loading, setLoading] = useState(false);
-	const [headcount, setHeadcount] = useState<Metrics | null>(null);
-	const [turnover, setTurnover] = useState<Metrics | null>(null);
+	const [headcount, setHeadcount] = useState<Serie[]>([]);
+	const [turnover, setTurnover] = useState<Serie[]>([]);
 	const { request } = useRequest();
 
 	const getMetrics = async (email: string) => {

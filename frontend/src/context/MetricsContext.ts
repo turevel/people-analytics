@@ -1,11 +1,11 @@
+import { Serie } from '@nivo/line';
 import { createContext } from 'react';
-import Metrics from '@/interfaces/IMetrics';
 
 interface Context {
   getMetrics: (email: string) => Promise<void>;
   loading: boolean
-  headcount: Metrics | null;
-  turnover: Metrics | null;
+  headcount: Serie[];
+  turnover: Serie[];
 }
 
 const MetricsContext = createContext({} as Context);
