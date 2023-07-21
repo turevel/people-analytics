@@ -6,6 +6,7 @@ interface Context {
   loading: boolean
   headcount: Serie[];
   turnover: Serie[];
+  logout: () => void;
 }
 
 const MetricsContext = createContext({} as Context);

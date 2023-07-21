@@ -12,9 +12,14 @@ function MetricsProvider({ children }: { children: ReactNode }) {
 
 	const getMetrics = async (email: string) => {
 		setLoading(true);
-		setHeadcount(await request(() => getHeadcount(email)));
-		setTurnover(await request(() => getTurnover(email)));
+		setHeadcount(await request(() => getHeadcount(email)) || []);
+		setTurnover(await request(() => getTurnover(email)) || []);
 		setLoading(false);
+	};
+
+	const logout = () => {
+		setHeadcount([]);
+		setTurnover([]);
 	};
 
 	const value = useMemo(() => ({
@@ -22,6 +27,7 @@ function MetricsProvider({ children }: { children: ReactNode }) {
 		headcount,
 		loading,
 		turnover,
+		logout,
 	}), [headcount, loading, turnover]);
 
 	return (
