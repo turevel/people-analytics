@@ -1,8 +1,11 @@
 import { IcRoundArrowForward } from '../_icons/IcRoundArrowForward';
+import { LineMdLoadingTwotoneLoop } from '../_icons/LineMdLoadingTwotoneLoop';
 
 interface Props {
   disabled: boolean;
 }
+
+const loading = false;
 
 function LoginFormSubmit({ disabled }: Props) {
 	return (
@@ -11,8 +14,21 @@ function LoginFormSubmit({ disabled }: Props) {
 			disabled={disabled}
 			type="submit"
 		>
-      Acessar
-			<IcRoundArrowForward className="text-lg" />
+			{
+				loading
+					? (
+						<>
+							<LineMdLoadingTwotoneLoop className="text-xl" />
+							Aguarde enquanto processamos...
+						</>
+					)
+					: (
+						<>
+							Acessar
+							<IcRoundArrowForward className="text-lg" />
+						</>
+					)
+			}
 		</button>
 	);
 }
