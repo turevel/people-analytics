@@ -1,25 +1,23 @@
+import LoginFormErrorMessage from './LoginFormErrorMessage';
 import LoginFormInput from './LoginFormInput';
 import LoginFormSubmit from './LoginFormSubmit';
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailValidator from '@/helpers/emailValidator';
 import useMetricsContext from '@/hooks/useMetricsContext';
 
 function LoginFormFields() {
-	const { headcount, turnover, getMetrics } = useMetricsContext();
 	const [email, setEmail] = useState('');
+	const [error, setError] = useState(false);
 	const navigate = useNavigate();
+	const { getMetrics } = useMetricsContext();
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		await getMetrics(email);
+		const success = await getMetrics(email);
+		if (success) navigate('/analytics');
+		else setError(true);
 	};
-
-	useEffect(() => {
-		if (headcount.length > 0 || turnover.length > 0) {
-			navigate('/analytics');
-		}
-	}, [headcount, turnover]);
 
 	return (
 		<form
@@ -32,6 +30,8 @@ function LoginFormFields() {
 			/>
 
 			<LoginFormSubmit disabled={!emailValidator(email)} />
+
+			{error && <LoginFormErrorMessage />}
 		</form>
 	);
 }
