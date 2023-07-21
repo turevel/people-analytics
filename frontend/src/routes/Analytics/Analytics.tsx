@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import Logo from '@/components/Logo';
+import AnalyticsPageHeader from '@/components/AnalyticsPageHeader';
 import Stats from '@/components/Stats';
 import useMetricsContext from '@/hooks/useMetricsContext';
 
@@ -12,7 +12,7 @@ function Analytics() {
 
 	return (
 		<main className="page bg-zinc-50">
-			<Logo />
+			<AnalyticsPageHeader />
 			<Stats />
 		</main>
 	);
