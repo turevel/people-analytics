@@ -5,7 +5,7 @@ function Headcount() {
 	const { headcount } = useMetricsContext();
 
 	return (
-		<div className="w-full max-w-xl bg-white px-[22px] sm:p-7 md:rounded-lg md:shadow">
+		<div className="w-full max-w-xl bg-white px-[22px] md:rounded-lg md:p-7 md:shadow">
 			<header className="mb-5 space-y-1 text-sm">
 				<h2 className="mb-2 text-xl font-bold text-indigo-500">
           Evolução de Headcount
