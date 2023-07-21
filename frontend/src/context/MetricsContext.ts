@@ -2,7 +2,7 @@ import { Serie } from '@nivo/line';
 import { createContext } from 'react';
 
 interface Context {
-  getMetrics: (email: string) => Promise<void>;
+  getMetrics: (email: string) => Promise<boolean>;
   loading: boolean
   headcount: Serie[];
   turnover: Serie[];

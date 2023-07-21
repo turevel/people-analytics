@@ -8,27 +8,28 @@ function MetricsProvider({ children }: { children: ReactNode }) {
 	const [loading, setLoading] = useState(false);
 	const [headcount, setHeadcount] = useState<Serie[]>([]);
 	const [turnover, setTurnover] = useState<Serie[]>([]);
-	const { request } = useRequest();
-
-	const getMetrics = async (email: string) => {
-		setLoading(true);
-		setHeadcount(await request(() => getHeadcount(email)) || []);
-		setTurnover(await request(() => getTurnover(email)) || []);
-		setLoading(false);
-	};
-
-	const logout = () => {
-		setHeadcount([]);
-		setTurnover([]);
-	};
+	const request = useRequest();
 
 	const value = useMemo(() => ({
-		getMetrics,
+		getMetrics: async (email: string) => {
+			setLoading(true);
+			const headcountData = await request(() => getHeadcount(email)) || [];
+			const turnoverData = await request(() => getTurnover(email)) || [];
+			setHeadcount(headcountData);
+			setTurnover(turnoverData);
+			setLoading(false);
+			return headcountData.length > 0 && turnoverData.length > 0;
+		},
+
+		logout: () => {
+			setHeadcount([]);
+			setTurnover([]);
+		},
+
 		headcount,
 		loading,
 		turnover,
-		logout,
-	}), [headcount, loading, turnover]);
+	}), [headcount, loading, turnover, request]);
 
 	return (
 		<MetricsContext.Provider value={value}>
