@@ -10,12 +10,7 @@ function LineChart({ axisBottomLabel, axisLeftLabel, data }: Props) {
 	return (
 		<div className="h-[320px]">
 			<ResponsiveLine
-				data={data}
-				lineWidth={2}
 				animate={true}
-				useMesh={true}
-				margin={{ bottom: 60, left: 50, top: 20, right: 10 }}
-				pointSize={12}
 				axisLeft={{
 					legend: axisLeftLabel,
 					legendOffset: -40,
@@ -25,9 +20,27 @@ function LineChart({ axisBottomLabel, axisLeftLabel, data }: Props) {
 					legend: axisBottomLabel,
 					legendOffset: 50,
 					legendPosition: 'middle',
-					tickRotation: -20,
+					tickRotation: -30,
 				}}
+				colors={['#6366f1']}
+				data={data}
 				enableArea={true}
+				lineWidth={2}
+				margin={{ bottom: 60, left: 50, top: 20, right: 10 }}
+				pointBorderColor="#6366f1"
+				pointBorderWidth={2}
+				pointColor="#fff"
+				pointSize={14}
+				theme={{
+					axis: {
+						legend: {
+							text: {
+								fontWeight: 'bold',
+							},
+						},
+					},
+				}}
+				useMesh={true}
 			/>
 		</div>
 	);
