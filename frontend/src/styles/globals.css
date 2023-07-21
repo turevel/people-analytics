@@ -9,6 +9,10 @@
     @apply transition-colors;
   }
 
+  ::selection {
+    @apply bg-indigo-500 text-zinc-50;
+  }
+
   :root {
     font-family: 'Inter', sans-serif;
     @apply antialiased;
