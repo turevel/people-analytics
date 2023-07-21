@@ -16,7 +16,9 @@ function LoginFormFields() {
 	};
 
 	useEffect(() => {
-		if (headcount && turnover) navigate('/analytics');
+		if (headcount.length > 0 || turnover.length > 0) {
+			navigate('/analytics');
+		}
 	}, [headcount, turnover]);
 
 	return (
