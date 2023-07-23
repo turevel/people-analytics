@@ -1,3 +1,4 @@
+import { EmployeeModel } from '../database/models';
 import express, { Request, Response } from 'express';
 
 const data1 = [
@@ -28,6 +29,11 @@ router.post('/headcount', (_req: Request, res: Response) => {
 
 router.post('/turnover', (_req: Request, res: Response) => {
 	return res.status(200).json(data1);
+});
+
+router.get('/users', async (_req: Request, res: Response) => {
+	const employees = await EmployeeModel.findAll();
+	return res.status(200).json(employees);
 });
 
 export default router;
