@@ -6,6 +6,6 @@ EXPOSE 80
 
 COPY . .
 
-RUN npm i && npm run build && npm run db:reset
+RUN npm i && npm run build
 
 ENTRYPOINT npm start
