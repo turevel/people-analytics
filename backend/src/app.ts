@@ -1,3 +1,6 @@
+import 'express-async-errors';
+import errorHandler from './middlewares/errorHandler';
+import router from './routes';
 import cors from 'cors';
 import express, { Express } from 'express';
 
@@ -12,6 +15,8 @@ class App {
 	config() {
 		this.app.use(express.json());
 		this.app.use(cors());
+		this.app.use(router);
+		this.app.use(errorHandler);
 	}
 
 	start(port: number) {
