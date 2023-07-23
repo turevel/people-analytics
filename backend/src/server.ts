@@ -1,7 +1,8 @@
 import App from './app';
-import dotenvSafe from 'dotenv-safe';
-
-dotenvSafe.config();
+import connection from './database/connection';
 
 const API_PORT = Number(process.env.API_PORT);
-new App().start(API_PORT);
+
+connection.authenticate()
+	.then(() => new App().start(API_PORT))
+	.catch((e) => console.log('Falha ao se conectar com o banco de dados!'));
