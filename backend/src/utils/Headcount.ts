@@ -1,10 +1,26 @@
+import { ErrorStatus } from '.';
 import { EmployeeModel } from '../database/models';
+import { ErrorMessages, HTTPStatusCode } from '../types';
 import { startOfMonth, lastDayOfMonth } from 'date-fns';
 
 class Headcount {
 	public async getHeadcount(email: string) {
+		await this.verifyEmail(email);
 		const employees = await EmployeeModel.findAll();
 		return this.getData(this.getEmployees(email, employees));
+	}
+
+	private async verifyEmail(email: string) {
+		const alreadyExists = await EmployeeModel.findOne(
+			{ where: { email }},
+		);
+
+		if (!alreadyExists) {
+			throw new ErrorStatus(
+				ErrorMessages.EMAIL_NOT_FOUND,
+				HTTPStatusCode.NOT_FOUND,
+			);
+		}
 	}
 
 	private getEmployees(leaderEmail: string, employees: EmployeeModel[]):
