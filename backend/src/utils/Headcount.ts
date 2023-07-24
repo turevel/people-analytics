@@ -54,7 +54,7 @@ class Headcount {
 			}
 		}
 
-		return [{ data }];
+		return [{ id: 1, data }];
 	}
 
 	private getActiveEmployeesLength(period: Date, employees: EmployeeModel[]) {
