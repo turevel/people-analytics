@@ -1,5 +1,5 @@
-import HeadcountService from '../services/HeadcountService';
-import HTTPStatusCode from '../types/HTTPStatusCode';
+import { HeadcountService } from '../services';
+import { HTTPStatusCode } from '../types';
 import { Request, Response } from 'express';
 
 class HeadcountController {

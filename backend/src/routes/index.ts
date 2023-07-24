@@ -1,6 +1,6 @@
-import HeadcountController from '../controllers/HeadcountController';
+import { HeadcountController } from '../controllers';
 import { EmployeeModel } from '../database/models';
-import Headcount from '../utils/Headcount';
+import { Headcount } from '../utils';
 import express, { Request, Response } from 'express';
 
 const data1 = [

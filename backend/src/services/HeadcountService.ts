@@ -1,20 +1,16 @@
-import ErrorMessages from '../types/ErrorMessages';
-import HTTPStatusCode from '../types/HTTPStatusCode';
-import ErrorStatus from '../utils/ErrorStatus';
-import Headcount from '../utils/Headcount';
+import { ErrorMessages, HTTPStatusCode } from '../types';
+import { ErrorStatus, Headcount } from '../utils';
 
 class HeadcountService {
 	public async getHeadcount(email: string) {
-		const headcount = await new Headcount().getHeadcount(email);
-
-		if (headcount.length === 0) {
+		if (!email) {
 			throw new ErrorStatus(
-				ErrorMessages.EMAIL_NOT_FOUND,
-				HTTPStatusCode.NOT_FOUND,
+				ErrorMessages.BAD_REQUEST,
+				HTTPStatusCode.BAD_REQUEST,
 			);
 		}
 
-		return headcount;
+		return await new Headcount().getHeadcount(email);
 	}
 }
 

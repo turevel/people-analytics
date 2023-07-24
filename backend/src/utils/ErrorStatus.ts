@@ -1,5 +1,4 @@
-import ErrorMessages from '../types/ErrorMessages';
-import HTTPStatusCode from '../types/HTTPStatusCode';
+import { ErrorMessages, HTTPStatusCode } from '../types';
 
 class ErrorStatus extends Error {
 	constructor(message: ErrorMessages, public status: HTTPStatusCode) {
