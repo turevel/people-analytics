@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: database_of_development
+      MYSQL_ROOT_PASSWORD: example
