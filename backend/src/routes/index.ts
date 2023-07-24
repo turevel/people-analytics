@@ -1,4 +1,6 @@
+import HeadcountController from '../controllers/HeadcountController';
 import { EmployeeModel } from '../database/models';
+import Headcount from '../utils/Headcount';
 import express, { Request, Response } from 'express';
 
 const data1 = [
@@ -23,9 +25,7 @@ const data1 = [
 
 const router = express.Router();
 
-router.post('/headcount', (_req: Request, res: Response) => {
-	return res.status(200).json(data1);
-});
+router.post('/headcount', new HeadcountController().getHeadcount);
 
 router.post('/turnover', (_req: Request, res: Response) => {
 	return res.status(200).json(data1);
@@ -33,6 +33,14 @@ router.post('/turnover', (_req: Request, res: Response) => {
 
 router.get('/users', async (_req: Request, res: Response) => {
 	const employees = await EmployeeModel.findAll();
+	return res.status(200).json(employees);
+});
+
+router.post('/test', async (req: Request, res: Response) => {
+	const { email } = req.body;
+
+	const employees = await new Headcount().getHeadcount(email);
+
 	return res.status(200).json(employees);
 });
 
