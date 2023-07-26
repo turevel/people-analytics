@@ -1,2 +1,1 @@
-export { default as HeadcountAndTurnoverController } from './HeadcountAndTurnoverController';
-
+export { default as MetricsController } from './MetricsController';

@@ -2,7 +2,7 @@ import { EmployeeModel } from '../database/models';
 import { ErrorMessages, HTTPStatusCode } from '../types';
 import { ErrorStatus, HeadcountAndTurnover } from '../utils';
 
-class HeadcountAndTurnoverController {
+class MetricsService {
 	public async getHeadcountAndTurnover(email: string) {
 		if (!email) {
 			throw new ErrorStatus(
@@ -24,4 +24,4 @@ class HeadcountAndTurnoverController {
 	}
 }
 
-export default HeadcountAndTurnoverController;
+export default MetricsService;
