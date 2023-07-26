@@ -13,20 +13,20 @@ function LineChart({ axisBottomLabel, axisLeftLabel, data }: Props) {
 				animate={true}
 				axisLeft={{
 					legend: axisLeftLabel,
-					legendOffset: -40,
+					legendOffset: -45,
 					legendPosition: 'middle',
 				}}
 				axisBottom={{
 					legend: axisBottomLabel,
-					legendOffset: 50,
+					legendOffset: 70,
 					legendPosition: 'middle',
-					tickRotation: -30,
+					tickRotation: -58,
 				}}
 				colors={['#6366f1']}
 				data={data}
 				enableArea={true}
 				lineWidth={2}
-				margin={{ bottom: 60, left: 50, top: 20, right: 10 }}
+				margin={{ bottom: 80, left: 50, top: 20, right: 10 }}
 				pointBorderColor="#6366f1"
 				pointBorderWidth={2}
 				pointColor="#fff"
