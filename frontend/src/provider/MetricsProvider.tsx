@@ -12,8 +12,8 @@ function MetricsProvider({ children }: { children: ReactNode }) {
 	const value = useMemo(() => ({
 		getMetrics: async (email: string) => {
 			const metrics = await request(() => requestMetrics(email));
-			setHeadcount(metrics.headcount || []);
-			setTurnover(metrics.turnover || []);
+			setHeadcount(metrics?.headcount || []);
+			setTurnover(metrics?.turnover || []);
 			return metrics !== null;
 		},
 
