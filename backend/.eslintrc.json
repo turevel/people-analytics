@@ -42,7 +42,7 @@
 		"semi": ["error", "always"],
 		"comma-dangle": ["error", "always-multiline"],
 		"eol-last": "error",
-		"max-len": ["error", { "code": 80, "ignoreStrings": true }],
+		"max-len": ["error", { "code": 95, "ignoreStrings": true }],
 		"block-spacing": "error",
 		"keyword-spacing": ["error", {"before": true, "after": true }],
 		"@typescript-eslint/no-unused-vars": "off"
