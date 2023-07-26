@@ -11,7 +11,7 @@ function Analytics() {
 	}
 
 	return (
-		<main className="page bg-zinc-50">
+		<main className="page bg-zinc-50 overflow-x-hidden">
 			<AnalyticsPageHeader />
 			<Stats />
 		</main>
