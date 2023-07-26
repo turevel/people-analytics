@@ -1,2 +1,1 @@
-export { default as HeadcountService } from './HeadcountService';
-export { default as TurnoverService } from './TurnoverService';
+export { default as HeadcountAndTurnoverService } from './HeadcountAndTurnoverService';

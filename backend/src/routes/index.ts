@@ -1,9 +1,8 @@
-import { HeadcountController, TurnoverController } from '../controllers';
+import { HeadcountAndTurnoverController } from '../controllers';
 import express from 'express';
 
 const router = express.Router();
 
-router.post('/headcount', new HeadcountController().getHeadcount);
-router.post('/turnover', new TurnoverController().getTurnover);
+router.post('/metrics', new HeadcountAndTurnoverController().getHeadcountAndTurnover);
 
 export default router;
