@@ -1,4 +1,3 @@
-import { ErrorStatus } from '.';
 import connection from '../database/connection';
 import { EmployeeModel } from '../database/models';
 import { startOfMonth, lastDayOfMonth, add } from 'date-fns';
